@@ -144,6 +144,14 @@ public class deepu {
     
         System.out.println();
     
+
+        /* 
+    xxxxxx
+   xxxxxx
+  xxxxxx
+ xxxxxx
+xxxxxx
+         */
     for(int i=no-1;i>=0;i--){
         for(int j=i;j>0;j--){
             System.out.print(" ");
