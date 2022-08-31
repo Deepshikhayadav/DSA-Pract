@@ -1,4 +1,4 @@
-public class deepu {
+public class patterns {
     public static void main(String[] args) throws Exception {
         int no = 5;
 
@@ -11,6 +11,15 @@ public class deepu {
          */
         for (int i = no; i > 0; i--) {
             for (int j = i; j > 0; j--) {
+                System.out.print("-");
+            }
+            System.out.println();
+        }
+
+        // or 
+
+        for (int i = 0 ; i<no ;i++) {
+            for (int j = no; j >i; j--) {
                 System.out.print("-");
             }
             System.out.println();
@@ -77,6 +86,22 @@ public class deepu {
            
         }
         System.out.println();
+
+        // or
+
+        for (int i = 1 ; i<=no ;i++) {
+            for (int j = no; j >=0; j--) {
+                if(i<=j)
+                System.out.print(" ");
+                else
+                System.out.print("*");
+            }
+            for (int j = 1; j <i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
 
         /* 
         1
@@ -161,7 +186,193 @@ xxxxxx
         }
         System.out.println();
     }
+    System.out.println();
+
+
+
+    /* 
+*         *
+**       **
+***     ***
+****   ****
+***** *****
+***** *****
+****   ****
+***     ***
+**       **
+*         *
+
+     */
+    //upper part
+    for(int i=0;i<no;i++){
+        for(int j=0;j<no;j++){
+            if(j<=i){
+                System.out.print("*"); 
+            }
+            else{
+                System.out.print(" "); 
+            }
+        }
     
+        for(int j=no;j>=0;j--){
+            if(j<=i){
+                System.out.print("*"); 
+            }
+            else{
+                System.out.print(" "); 
+            }
+        }
+        System.out.println();
+
+    }
+//lower part
+for(int i=no;i>=0;i--){
+    for(int j=0;j<=no;j++){
+        if(i<=j){
+            System.out.print(" "); 
+        }
+        else{
+            System.out.print("*"); 
+        }
+    }
+    for(int j=no;j>0;j--){
+        if(j<=i){
+            System.out.print("*"); 
+        }
+        else{
+            System.out.print(" "); 
+        }
+    }
+    System.out.println();
+}
+
+/* 
+    1
+   212
+  32132
+ 4321432
+543215432
+
+ */
+    for(int i=0;i<=no;i++){
+        for(int j=no;j>0;j--){
+            if(j<=i){
+                System.out.print(j);  
+            }
+            else
+            System.out.print(" ");
+        }
+        for(int j=no;j>1;j--){
+            if(j<=i){
+                System.out.print(j);  
+            }
+        }
+        System.out.println();
+    }
+    System.out.println();
+
+
+/* 
+     *
+    ***
+   *****
+  *******
+ *********
+ *********
+  *******
+   *****
+    ***
+     *
+     
+ */
+//upper part
+    for (int i = 1 ; i<=no ;i++) {
+        for (int j = no; j >=0; j--) {
+            if(i<=j)
+            System.out.print(" ");
+            else
+            System.out.print("*");
+        }
+        for (int j = 1; j <i; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    //lower part
+    for (int i = no; i>=0;i--) {
+        for (int j = no; j >=0; j--) {
+            if(i<=j)
+            System.out.print(" ");
+            else
+            System.out.print("*");
+        }
+        for (int j = 1; j <i; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    
+/* 
+ 
+*         *
+**       **
+* *     * *
+*  *   *  *
+*   * *   *
+*    *    *
+*   * *   *
+*  *   *  *
+* *     * *
+**       **
+*         *
+
+ */
+ //upper part
+ for(int i=0;i<no;i++){
+    for(int j=0;j<no;j++){
+        if(j<=i && j==i || j==0){
+            System.out.print("*"); 
+        }
+        else{
+            System.out.print(" "); 
+        }
+    }
+
+    for(int j=no;j>=0;j--){
+        if(j<=i && j==i || j==0){
+            System.out.print("*"); 
+        }
+        else{
+            System.out.print(" "); 
+        }
+    }
+    System.out.println();
+
+}
+//lower part
+for(int i=no;i>=0;i--){
+for(int j=0;j<=no;j++){
+    if(j<=i && j==i || j==0){
+        System.out.print("*"); 
+    }
+    else{
+        System.out.print(" "); 
+    }
+}
+for(int j=no-1;j>=0;j--){
+    if(j<=i && j==i || j==0){
+        System.out.print("*"); 
+    }
+    else{
+        System.out.print(" "); 
+    }
+}
+System.out.println();
+}
+
+
+
+
     }   
 }
 
