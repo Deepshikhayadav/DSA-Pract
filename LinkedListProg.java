@@ -1,4 +1,4 @@
-class LinkedList{
+class LinkedListTest{
     Node head;
     static class Node{
         int data;
@@ -66,7 +66,7 @@ class LinkedList{
 
 public class LinkedListProg {
     public static void main(String[] arg) {
-        LinkedList ll = new LinkedList();
+        LinkedListTest ll = new LinkedListTest();
         ll.append(6);
         ll.push(1);
         ll.push(2);
